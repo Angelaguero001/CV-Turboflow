@@ -1,0 +1,13 @@
+﻿use master
+CREATE LOGIN TecMiUser
+	WITH PASSWORD = 'TecMi#12345' 
+GO
+
+use fenicia
+CREATE USER TecMiUser FROM LOGIN TecMiUser;
+
+
+
+EXEC sp_addrolemember 'db_datareader', 'TecMiUser';
+EXEC sp_addrolemember 'db_datawriter', 'TecMiUser';
+

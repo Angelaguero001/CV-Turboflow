@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DD804C0-C212-40CA-BA47-0CDCC59D4023}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurboFlow</RootNamespace>
+    <AssemblyName>TurboFlow</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44370</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\compiled 20220726\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\compiled 20220726\bin\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\..\compiled 20220726\bin\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core">
+      <HintPath>..\..\..\compiled 20190511\bin\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Blob">
+      <HintPath>..\..\..\compiled 20190511\bin\Microsoft.Azure.Storage.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common">
+      <HintPath>..\..\..\compiled 20190511\bin\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.2.0\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\default\activities.css" />
+    <Content Include="App_Themes\default\alerts.css" />
+    <Content Include="App_Themes\default\angucomplete-alt.css" />
+    <Content Include="App_Themes\default\animate.css" />
+    <Content Include="App_Themes\default\bootstrap-datepicker.min.css" />
+    <Content Include="App_Themes\default\bootstrap-datetimepicker.css" />
+    <Content Include="App_Themes\default\bootstrap.min.css" />
+    <Content Include="App_Themes\default\font-awesome.min.css" />
+    <Content Include="App_Themes\default\historial.css" />
+    <Content Include="App_Themes\img\loading.gif" />
+    <Content Include="App_Themes\default\ivh-treeview-theme-basic.css" />
+    <Content Include="App_Themes\default\ivh-treeview.css" />
+    <Content Include="App_Themes\default\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="App_Themes\default\jquery.notific8.css" />
+    <Content Include="App_Themes\default\jsgrid.css" />
+    <Content Include="App_Themes\default\lightbox.css" />
+    <Content Include="App_Themes\default\orange-blue.css" />
+    <Content Include="App_Themes\default\pace.css" />
+    <Content Include="App_Themes\default\select.css" />
+    <Content Include="App_Themes\default\select2.css" />
+    <Content Include="App_Themes\default\selectize.default.css" />
+    <Content Include="App_Themes\default\style-responsive.css" />
+    <Content Include="App_Themes\default\WorkShop.css" />
+    <Content Include="App_Themes\rapid\activities.css" />
+    <Content Include="App_Themes\rapid\alerts.css" />
+    <Content Include="App_Themes\rapid\angucomplete-alt.css" />
+    <Content Include="App_Themes\rapid\animate.css" />
+    <Content Include="App_Themes\rapid\bootstrap-datepicker.min.css" />
+    <Content Include="App_Themes\rapid\bootstrap-datetimepicker.css" />
+    <Content Include="App_Themes\rapid\bootstrap.min.css" />
+    <Content Include="App_Themes\rapid\font-awesome.min.css" />
+    <Content Include="App_Themes\rapid\historial.css" />
+    <Content Include="App_Themes\rapid\img\loading.gif" />
+    <Content Include="App_Themes\rapid\ivh-treeview-theme-basic.css" />
+    <Content Include="App_Themes\rapid\ivh-treeview.css" />
+    <Content Include="App_Themes\rapid\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="App_Themes\rapid\jquery.notific8.css" />
+    <Content Include="App_Themes\rapid\jsgrid.css" />
+    <Content Include="App_Themes\rapid\lightbox.css" />
+    <Content Include="App_Themes\rapid\multiselect.css" />
+    <Content Include="App_Themes\rapid\orange-blue.css" />
+    <Content Include="App_Themes\rapid\pace.css" />
+    <Content Include="App_Themes\rapid\select.css" />
+    <Content Include="App_Themes\rapid\select2.css" />
+    <Content Include="App_Themes\rapid\selectize.default.css" />
+    <Content Include="App_Themes\rapid\style-responsive.css" />
+    <Content Include="App_Themes\rapid\WorkShop.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-icon-awesome.min.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\login2.css" />
+    <Content Include="css\main.css" />
+    <Content Include="Global.asax" />
+    <Content Include="js\angular\angucomplete-alt.js" />
+    <Content Include="js\angular\angular-animate.min.js" />
+    <Content Include="js\angular\angular-bootstrap-multiselect.js" />
+    <Content Include="js\angular\angular-disable.js" />
+    <Content Include="js\angular\angular-masks-standalone.js" />
+    <Content Include="js\angular\angular-money-directive.js" />
+    <Content Include="js\angular\angular-sanitize.min.js" />
+    <Content Include="js\angular\angular-touch.min.js" />
+    <Content Include="js\angular\angular-ui-utils.js" />
+    <Content Include="js\angular\angular-uuid.js" />
+    <Content Include="js\angular\angular.min.js" />
+    <Content Include="js\angular\angularjs-dropdown-multiselect.js" />
+    <Content Include="js\angular\customDirectives.js" />
+    <Content Include="js\angular\ivh-treeview.js" />
+    <Content Include="js\angular\mainModule.js" />
+    <Content Include="js\angular\mask.js" />
+    <Content Include="js\angular\multiselect.js" />
+    <Content Include="js\angular\new\angucomplete-alt.js" />
+    <Content Include="js\angular\new\app.js" />
+    <Content Include="js\angular\ng-file-upload-shim.js" />
+    <Content Include="js\angular\ng-file-upload.js" />
+    <Content Include="js\angular\ng-jsgrid.js" />
+    <Content Include="js\angular\ngMask.js" />
+    <Content Include="js\angular\select.min.js" />
+    <Content Include="js\angular\smart-table.min.js" />
+    <Content Include="js\angular\toaster.min.js" />
+    <Content Include="js\angular\underscore.js" />
+    <Content Include="js\angular\upload.js" />
+    <Content Include="js\jquery\bootstrap-datepicker.js" />
+    <Content Include="js\jquery\bootstrap-hover-dropdown.js" />
+    <Content Include="js\jquery\bootstrap.min.js" />
+    <Content Include="js\jquery\custom.min.js" />
+    <Content Include="js\jquery\daterangepicker.js" />
+    <Content Include="js\jquery\highcharts.js" />
+    <Content Include="js\jquery\holder.js" />
+    <Content Include="js\jquery\html5shiv.js" />
+    <Content Include="js\jquery\icheck.min.js" />
+    <Content Include="js\jquery\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\jquery\jquery-ui.js" />
+    <Content Include="js\jquery\jquery.alerts.js" />
+    <Content Include="js\jquery\jquery.cookie.js" />
+    <Content Include="js\jquery\jquery.js" />
+    <Content Include="js\jquery\jquery.menu.js" />
+    <Content Include="js\jquery\jquery.metisMenu.js" />
+    <Content Include="js\jquery\jquery.mixitup.js" />
+    <Content Include="js\jquery\jquery.newsTicker.min.js" />
+    <Content Include="js\jquery\jquery.notific8.min.js" />
+    <Content Include="js\jquery\jquery.slimscroll.js" />
+    <Content Include="js\jquery\lightbox.min.js" />
+    <Content Include="js\jquery\moment.js" />
+    <Content Include="js\jquery\nuevos\bootstrap-datepicker.min.js" />
+    <Content Include="js\jquery\nuevos\jquery-1.8.3.js" />
+    <Content Include="js\jquery\nuevos\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery\nuevos\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="js\jquery\nuevos\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="js\jquery\pace.min.js" />
+    <Content Include="js\jquery\respond.min.js" />
+    <Content Include="js\jquery\responsive-tabs.js" />
+    <Content Include="js\jsGrid\Copy of jsgrid.core.js" />
+    <Content Include="js\jsGrid\jsgrid.core.js" />
+    <Content Include="js\jsGrid\jsgrid.field.checkbox.js" />
+    <Content Include="js\jsGrid\jsgrid.field.control.js" />
+    <Content Include="js\jsGrid\jsgrid.field.js" />
+    <Content Include="js\jsGrid\jsgrid.field.number.js" />
+    <Content Include="js\jsGrid\jsgrid.field.select.js" />
+    <Content Include="js\jsGrid\jsgrid.field.text.js" />
+    <Content Include="js\jsGrid\jsgrid.field.textarea.js" />
+    <Content Include="js\jsGrid\jsgrid.load-indicator.js" />
+    <Content Include="js\jsGrid\jsgrid.load-strategies.js" />
+    <Content Include="js\jsGrid\jsgrid.sort-strategies.js" />
+    <Content Include="js\scripts\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="js\scripts\jquery.formatCurrency-1.4.0.js" />
+    <Content Include="js\scripts\jquery.formatCurrency.all.js" />
+    <Content Include="js\scripts\jQuery.MaskedInputs.js" />
+    <Content Include="js\scripts\jquery.widgets.js" />
+    <Content Include="js\scripts\json2.js" />
+    <Content Include="js\scripts\load.js" />
+    <Content Include="js\scripts\xml2json.js" />
+    <Content Include="js\workshop\acceso.js" />
+    <Content Include="js\workshop\demos.js" />
+    <Content Include="js\workshop\loader.js" />
+    <Content Include="js\workshop\main.js" />
+    <Content Include="js\workshop\util.js" />
+    <Content Include="pages\BrandModel.aspx" />
+    <Content Include="pages\sample.js" />
+    <Content Include="pages\sample.aspx" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="class\logic_acess.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="include\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\BrandModel.aspx.cs">
+      <DependentUpon>BrandModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\BrandModel.aspx.designer.cs">
+      <DependentUpon>BrandModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\sample.aspx.cs">
+      <DependentUpon>sample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\sample.aspx.designer.cs">
+      <DependentUpon>sample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\emptyT\" />
+    <Folder Include="images\" />
+    <Folder Include="js\pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="include\master.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\turboflow - Web Deploy.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
